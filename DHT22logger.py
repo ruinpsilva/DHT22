@@ -285,23 +285,17 @@ def main():
 
 	# Sensor names to add to database, e.g. carage, outside
 	sensor1 = configurations["sensors"][0]["sensor1"]
-	sensor2 = configurations["sensors"][0]["sensor2"]
 
 	# limits for triggering alarms (temperature)
 	sensor1lowlimit = configurations["triggerlimits"][0]["sensor1lowlimit"]
-	sensor2lowlimit = configurations["triggerlimits"][0]["sensor2lowlimit"]
 	sensor1highlimit = configurations["triggerlimits"][0]["sensor1highlimit"]
-	sensor2highlimit = configurations["triggerlimits"][0]["sensor2highlimit"]
 
 	# limits for triggering alarms (humidity)
 	sensor1lowlimitHumidity = configurations["triggerlimitsHumidity"][0]["sensor1lowlimit"]
-	sensor2lowlimitHumidity = configurations["triggerlimitsHumidity"][0]["sensor2lowlimit"]
 	sensor1highlimitHumidity = configurations["triggerlimitsHumidity"][0]["sensor1highlimit"]
-	sensor2highlimitHumidity = configurations["triggerlimitsHumidity"][0]["sensor2highlimit"]
 
 	# Sensor gpios
 	gpioForSensor1 = configurations["sensorgpios"][0]["gpiosensor1"]
-	gpioForSensor2 = configurations["sensorgpios"][0]["gpiosensor2"]
 
 	# Backup enabled
 	backupEnabled = configurations["sqlBackupDump"][0]["backupDumpEnabled"]
