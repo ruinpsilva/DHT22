@@ -39,6 +39,7 @@ import json
 import subprocess
 import MySQLdb
 import smtplib
+import logging
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
@@ -62,7 +63,9 @@ def sensorReadings(gpio, sensor):
 	humidity = re.findall(r"Humidity=(\d+.\d+)", sensorReadings)[0]
 	intTemp = float(temperature)
 	intHumidity = float(humidity)
-
+    logging.warning("sensorReadings")
+    logging.warning(intTemp)
+    logging.warning(intHumidity)
 	return intTemp, intHumidity
 
 
@@ -235,6 +238,14 @@ def checkWarningLog(sensor, sensortemp):
 # NELSON changed to activate the warning on Humidity limits
 def checkLimits(sensor, sensorTemperature, sensorHumidity, sensorhighlimit, sensorlowlimit, sensorhighlimitHumidity,
 				sensorlowlimitHumidity):
+	logging.warning("checkLimits")
+	logging.warning(sensor)
+	logging.warning(sensorTemperature)
+	logging.warning(sensorHumidity)
+	logging.warning(sensorhighlimit)
+	logging.warning(sensorlowlimit)
+	logging.warning(sensorhighlimitHumidity)
+	logging.warning(sensorlowlimitHumidity)
 	check = True
 	warningmsg = ""
 
@@ -368,6 +379,9 @@ def main():
 	sensor1error = 0
 	okToUpdate = False
 	# Sensor 1 readings and limit check
+    logging.warning("sensor1humidity")
+    logging.warning(gpioForSensor1)
+    logging.warning(sensorType)
 	try:
 		sensor1temperature, sensor1humidity = sensorReadings(gpioForSensor1, sensorType)
 		limitsOk, warningMessage = checkLimits(sensor1, sensor1temperature, sensor1humidity, sensor1highlimit,
