@@ -379,20 +379,20 @@ def main():
 	sensor1error = 0
 	okToUpdate = False
 	# Sensor 1 readings and limit check
-    logging.warning("sensor1humidity")
+	logging.warning("sensor1humidity")
 	logging.warning(gpioForSensor1)
 	logging.warning(sensorType)
 	logging.warning(sensor1)
-	logging.warning(sensor1temperature)
-	logging.warning(sensor1humidity)
 	logging.warning(sensor1highlimit)
 	logging.warning(sensor1lowlimit)
 	logging.warning(sensor1lowlimitHumidity)
-	logging.warning(sensor1highHumidity)
+	logging.warning(sensor1highlimitHumidity)
 	try:
 		sensor1temperature, sensor1humidity = sensorReadings(gpioForSensor1, sensorType)
+		logging.warning(sensor1temperature)
+		logging.warning(sensor1humidity)
 		limitsOk, warningMessage = checkLimits(sensor1, sensor1temperature, sensor1humidity, sensor1highlimit,
-											   sensor1lowlimit, sensor1lowlimitHumidity, sensor1highHumidity)
+											   sensor1lowlimit, sensor1lowlimitHumidity, sensor1highlimitHumidity)
 	except:
 		emailWarning("Failed to read {0} sensor".format(sensor1), msgType)
 		sensor1error = 1
