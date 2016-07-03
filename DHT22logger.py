@@ -273,6 +273,7 @@ def checkLimits(sensor, sensorTemperature, sensorHumidity, sensorhighlimit, sens
 																										 sensorhighlimitHumidity,
 																										 sensorTemperature)
 		check = False
+	logging.warning("the end")
 	return check, warningmsg
 
 
