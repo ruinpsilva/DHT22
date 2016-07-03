@@ -260,12 +260,13 @@ def checkLimits(sensor, sensorTemperature, sensorHumidity, sensorhighlimit, sens
 																										   sensorTemperature,
 																										   sensorhighlimit,
 																										   sensorHumidity)
-
+		check = False
 	elif float(sensorHumidity) < float(sensorlowlimitHumidity):
 		warningmsg = "Humidity to low on sensor {0}\nReading: {1}\nLimit: {2}\nTemperature: {3}".format(sensor,
 																										sensorHumidity,
 																										sensorlowlimitHumidity,
 																										sensorTemperature)
+		check = False
 	elif float(sensorHumidity) > float(sensorhighlimitHumidity):
 		warningmsg = "Humidity to high on sensor {0}\nReading: {1}\nLimit: {2}\nTemperature: {3}".format(sensor,
 																										 sensorHumidity,
