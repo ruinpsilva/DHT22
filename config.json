@@ -1,13 +1,12 @@
 {
 "mysql":[{
 	"host":"localhost",
-	"user":"logger",
-	"password":"password",
+	"user":"nelsonlog",
+	"password":"log1980",
 	"database":"temperatures"
 	}],
 "sensors":[{
-	"sensor1":"Outside",
-	"sensor2":"Inside"
+	"sensor1":"Outside"
 	}],
 "triggerlimits":[{
 	"sensor1lowlimit":"10",
@@ -21,10 +20,10 @@
 	"gpiosensor1":"22"
 	}],
 "mailinfo":[{
-	"senderaddress":"email address to sender field@gmail.com",
-	"receiveraddress":"email address where to send warnings@gmail.com",
-	"username":"username",
-	"password":"password",
+	"senderaddress":"rui.nelson.p.silva@gmail.com",
+	"receiveraddress":"rui.silva.rasp.dht22@gmail.com",
+	"username":"rui.silva.rasp.dht22@gmail.com",
+	"password":"Alcatel1980Alcatel2016",
 	"subjectmessage":"Info from temperature logger",
 	"subjectwarning":"Warning from temperature logger"
 	}],

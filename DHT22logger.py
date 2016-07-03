@@ -63,9 +63,9 @@ def sensorReadings(gpio, sensor):
 	humidity = re.findall(r"Humidity=(\d+.\d+)", sensorReadings)[0]
 	intTemp = float(temperature)
 	intHumidity = float(humidity)
-    logging.warning("sensorReadings")
-    logging.warning(intTemp)
-    logging.warning(intHumidity)
+	logging.warning("sensorReadings")
+	logging.warning(intTemp)
+	logging.warning(intHumidity)
 	return intTemp, intHumidity
 
 
@@ -380,8 +380,15 @@ def main():
 	okToUpdate = False
 	# Sensor 1 readings and limit check
     logging.warning("sensor1humidity")
-    logging.warning(gpioForSensor1)
-    logging.warning(sensorType)
+	logging.warning(gpioForSensor1)
+	logging.warning(sensorType)
+	logging.warning(sensor1)
+	logging.warning(sensor1temperature)
+	logging.warning(sensor1humidity)
+	logging.warning(sensor1highlimit)
+	logging.warning(sensor1lowlimit)
+	logging.warning(sensor1lowlimitHumidity)
+	logging.warning(sensor1highHumidity)
 	try:
 		sensor1temperature, sensor1humidity = sensorReadings(gpioForSensor1, sensorType)
 		limitsOk, warningMessage = checkLimits(sensor1, sensor1temperature, sensor1humidity, sensor1highlimit,
