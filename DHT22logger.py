@@ -385,7 +385,7 @@ def main():
 	try:
 		sensor1temperature, sensor1humidity = sensorReadings(gpioForSensor1, sensorType)
 		limitsOk, warningMessage = checkLimits(sensor1, sensor1temperature, sensor1humidity, sensor1highlimit,
-											   sensor1lowlimit)
+											   sensor1lowlimit, sensor1lowlimitHumidity, sensor1highHumidity)
 	except:
 		emailWarning("Failed to read {0} sensor".format(sensor1), msgType)
 		sensor1error = 1
@@ -425,7 +425,7 @@ def main():
 		try:
 			sensor2temperature, sensor2humidity = sensorReadings(gpioForSensor2, sensorType)
 			limitsOk, warningMessage = checkLimits(sensor2, sensor2temperature, sensor2humidity, sensor2highlimit,
-												   sensor2lowlimit)
+												   sensor2lowlimit, sensor1lowlimitHumidity, sensor1highHumidity)
 		except:
 			emailWarning("Failed to read {0} sensor".format(sensor2), msgType)
 			sensor2error = 1

@@ -10,20 +10,15 @@
 	"sensor2":"Inside"
 	}],
 "triggerlimits":[{
-	"sensor1lowlimit":"-20",
-	"sensor2lowlimit":"5",
-	"sensor1highlimit":"35",
-	"sensor2highlimit":"20"
+	"sensor1lowlimit":"10",
+	"sensor1highlimit":"30"
 	}],
 "triggerlimitsHumidity":[{
-	"sensor1lowlimit":"0",
-	"sensor2lowlimit":"0",
-	"sensor1highlimit":"100",
-	"sensor2highlimit":"100"
+	"sensor1lowlimit":"50",
+	"sensor1highlimit":"60"
 }],
 "sensorgpios":[{
-	"gpiosensor1":"22",
-	"gpiosensor2":"23"
+	"gpiosensor1":"22"
 	}],
 "mailinfo":[{
 	"senderaddress":"email address to sender field@gmail.com",
@@ -43,7 +38,7 @@
 	"connectionCheckHour":"23"
 	}],
 "sensortype":"22",
-"sensoramount":"2",
+"sensoramount":"1",
 "sqlbackuppath":"/home/pi/DHT22-TemperatureLogger/Backups/",
 "adafruitpath":"/home/pi/Adafruit_Python_DHT/examples/AdafruitDHT.py"
 }
